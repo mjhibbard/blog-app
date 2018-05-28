@@ -9,7 +9,7 @@ var bodyParser			= require("body-parser"),
 mongoose.connect("mongodb://localhost/restful_blog_app");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-app.use(bodyParser.urlencoded{extended: true});
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSanitizer());
 app.use(methodOverride("_method"));
 
@@ -76,7 +76,7 @@ app.get("/blogs/:id/edit", function(req, res){
 		if(err){
 			res.redirect("/blogs");
 		} else{
-			res.render("edit", blog: foundBlog);
+			res.render("edit", {blog: foundBlog});
 		}
 	});
 });
@@ -88,7 +88,7 @@ app.put("/blogs/:id", function(req, res){
 		if(err){
 			res.redirect("/blogs");
 		} else{
-			res.redirect("/blogs/" + req.params.id;
+			res.redirect("/blogs/" + req.params.id);
 		}
 	});
 });
@@ -106,6 +106,6 @@ app.delete("/blogs/:id", function(req, res){
 	});
 });
 
-app.listen(process.env.PORT, process.env.IP, function{
+app.listen(process.env.PORT, process.env.IP, function(){
 	console.log("Server is running!");
 });
