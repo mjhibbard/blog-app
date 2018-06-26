@@ -7,3 +7,11 @@
 //  semantic-ui.com or use CDN ----- could use piecewise----
 //npm install method-override --save
 //npm install express-sanitizer --save
+
+
+//Blog App refactor:
+
+//model directory and link.......DONE
+//restful routes refactor
+//mongoDB setup and connect
+//async refactor??? maybe not necessary in this type of site
