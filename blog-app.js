@@ -1,12 +1,14 @@
 //blog app
 
-//npm install express mongoose ejs body-parser --save
-//npm init
-	//entry to app.js
+//npm install express mongoose ejs body-parser --save .......DONE
+//npm init.........DONE
+	//entry to app.js......DONE
+
 //ADDING SEMANTIC UI  ==========
 //  semantic-ui.com or use CDN ----- could use piecewise----
-//npm install method-override --save
-//npm install express-sanitizer --save
+
+//npm install method-override --save........DONE
+//npm install express-sanitizer --save..........DONE
 
 
 //Blog App refactor:
