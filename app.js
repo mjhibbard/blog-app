@@ -1,7 +1,7 @@
 var bodyParser			= require("body-parser"),
 	methodOverride		= require("method-override"),
 	expressSanitizer	= require("express-sanitizer"),
-	mongoose			= requre("mongoose"),
+	mongoose			= require("mongoose"),
 	express				= require("express"),
 	app					= express();
 
@@ -10,7 +10,7 @@ var bodyParser			= require("body-parser"),
 var blogRoutes = require("./routes/blog");
 
 // APP CONFIG
-mongoose.connect("mongodb://localhost/restful_blog_app");
+mongoose.connect("mongodb://localhost/27017");
 mongoose.set('debug', true);
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -32,7 +32,7 @@ app.listen(3000, function(){
 //nodemon app.js
 //npm install -g nodemon
 //Start the MongoDB environment
-//"C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe" --dbpath "C:\Users\Mike\Documents\Alpha-Code\Adv WebDev\SPA Todo App\data"
+//"C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe" --dbpath "C:\Users\Mike\Documents\Alpha-Code\Projects\Blog-App\data"
 
 
 //Start MongoDB
