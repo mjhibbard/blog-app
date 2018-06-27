@@ -58,11 +58,11 @@ router.get("/:id/edit", function(req, res){
 //UPDATE ROUTE
 router.put("/:id", function(req, res){
 	req.body.blog.body = req.sanitize(req.body.blog.body);
-	Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, updatedBlog){
+	Blog.findByIdAndUpdate(req.params.id, req.body.blog, {new: true}, function(err, updatedBlog){
 		if(err){
 			res.redirect("/");
 		} else{
-			res.redirect("/" + req.params.id);
+			res.redirect("/blogs/" + req.params.id);
 		}
 	});
 });
